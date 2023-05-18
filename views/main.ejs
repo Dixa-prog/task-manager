@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- normalize css -->
+    <link rel="stylesheet" href="./normalize.css" />
+    <!-- main css -->
+    <link rel="stylesheet" href="./main.css" />
+    <title>Task Manager</title>
+  </head>
+  <body>
+    <form class="task-form">
+      <h4>task manager</h4>
+      <div class="div"><label for="taskDescription">Task Description</label></div>
+      <div class="form-control">
+        <input
+          type="text"
+          name="taskDescription"
+          class="task-input1"
+          placeholder="Task Description"
+          required
+        />
+      </div>
+      </div>
+      <div class="div"><label for="assignedTo">Assigned To</label></div>
+      <div class="form-control">
+        <input
+          type="text"
+          name="assignedTo"
+          class="task-input3"
+          placeholder="Assigned To"
+          required
+        />
+      </div>
+      <div class="div"><label for="category">Category</label></div>
+      <div class="form-control">
+        <input
+          type="text"
+          name="category"
+          class="task-input4"
+          placeholder="Category"
+          required
+        />
+      </div>
+      <div class="div"><label for="startDate">Start Date:</label></div>
+      <div class="form-control">
+        
+        <input
+          type="date"
+          name="startDate"
+          id="startDate"
+          class="task-input5"
+          required
+        />
+      </div>
+      <div ><label for="finishDate">Finish Date:</label></div>
+      <div class="form-control">
+        <input
+          type="date"
+          name="finishDate"
+          id="finishDate"
+          class="task-input6"
+          required
+        />
+      </div>
+      <div class="div"><label for="days">Days</label></div>
+      <div class="form-control">
+        <input
+          type="number"
+          name="days"
+          class="task-input7"
+          placeholder="Days"
+        />
+      </div>
+      <button type="submit" class="btn submit-btn">submit</button>
+      <div class="form-alert"></div>
+    </form>
+    <!-- <section class="tasks-container">
+      <p class="loading-text">Loading...</p>
+      <div class="tasks"></div>
+    </section> -->
+    <!-- axios -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./browser-app.js"></script>
+  </body>
+</html>

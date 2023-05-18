@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- normalize css -->
+    <link rel="stylesheet" href="./normalize.css" />
+    <!-- main css -->
+    <link rel="stylesheet" href="./main.css" />
+    <title>Tasks</title>
+  </head>
+  <body>
+    <div class="signout-btn">
+      <form action="/api/auth/signout" method="post">
+        <div class="form-group">
+          <input type="submit" value="Signout" class="btn btn-primary" onclick="Signout()">
+        </div>
+      </form>
+    </div>
+    <section class="tasks-container">
+      <p class="loading-text">Loading...</p>
+      <div class="tasks"></div>
+    </section>
+    <!-- axios -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./task-view.js"></script>
+    <script>
+      function Signout() {
+        axios.post("/api/auth/signout")
+          .then(response => {
+          console.log(response);
+          // alert("Registration Successful!");
+          window.location.href = "/index";
+        })
+        .catch(error => {
+          console.log('not done');
+        });
+  }
+  </script>
+  </body>
+</html>
